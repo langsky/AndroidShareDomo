@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <import type="io.ican.hgl.share.ShareEntity"/>
+
+        <variable
+                name="entity"
+                type="ShareEntity"/>
+    </data>
+
+    <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_revieve"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="io.ican.hgl.share.ReceiveActivity">
+
+        <TextView
+                android:text="@{entity.textContent}"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <TextView
+                android:text="@{entity.textContents[0]}"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <TextView
+                android:text="@{entity.textContents[1]}"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <ImageView
+                app:uri="@{entity.imageUri}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                app:uri="@{entity.imageUris[0]}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                app:uri="@{entity.imageUris[1]}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
+
+
